@@ -17,10 +17,10 @@ CREATE TABLE `authorities` (
   REFERENCES `users` (`username`)
 );
 
+-- ACTIVATION OF USERS NEED AN INITIAL ADMINISTRATOR AS SEE HERE BELOW
 use presly;
 DELETE FROM authorities WHERE  username = "rootx1";
 DELETE FROM authorities WHERE  username = "rootx2";
-
 DELETE FROM users WHERE  username = "rootx1";
 DELETE FROM users WHERE  username = "rootx2";
 

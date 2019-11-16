@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.armcorp.model.ActiveUser;
+import org.armcorp.model.legitUser;
 
 @RestController
 public class Controller {
@@ -21,7 +21,7 @@ public class Controller {
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	@PostMapping(value = "/register")
-	public String regiter(@RequestBody ActiveUser User1) {
+	public String regiter(@RequestBody legitUser User1) {
 		List<GrantedAuthority> authorities = new ArrayList<>();
 
 		authorities.add(new SimpleGrantedAuthority(User1.getRoles()));
@@ -38,5 +38,5 @@ public class Controller {
 	public String user() {		return "<h3>Hello Monze User :)</h3>";	}
 
 	@GetMapping(value = "/")
-	public String welcome() {	return "<h3>Welcome to veryone everywhere:)</h3>";	}
+	public String welcome() {	return "<h3> Welcome to everyone patient  :)</h3>";	}
 }
