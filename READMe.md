@@ -1,11 +1,13 @@
 #  AN APP FOR SECURITY FOR MEDICAL DATABASES
 
-To execute the code import code and run the following command; 
 ## Run application
 
 To run the application in development time, start the SERVER, and then enter the following Maven command:  
 ```
+
+mvn clean package
 mvn spring-boot:run
+
 ```
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser to see the application.

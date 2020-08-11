@@ -1,4 +1,5 @@
 package org.armcorp.controller;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class Controller {
 	private JdbcUserDetailsManager jdbcUserDetailsManager;
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
+
 	@PostMapping(value = "/register")
 	public String regiter(@RequestBody legitUser User1) {
 		List<GrantedAuthority> authorities = new ArrayList<>();
@@ -32,11 +34,17 @@ public class Controller {
 	}
 
 	@GetMapping(value = "/admin")
-	public String admin() {		return "<h3>Welcome Lusaka Admin :)</h3>";	}
+	public String admin() {
+		return "<h3>Welcome Lusaka Admin :)</h3>";
+	}
 
 	@GetMapping(value = "/user")
-	public String user() {		return "<h3>Hello Monze User :)</h3>";	}
+	public String user() {
+		return "<h3>Hello Monze User :)</h3>";
+	}
 
 	@GetMapping(value = "/")
-	public String welcome() {	return "<h3> Welcome to everyone patient  :)</h3>";	}
+	public String welcome() {
+		return "<h3> Welcome to everyone patient  :)</h3>";
+	}
 }
