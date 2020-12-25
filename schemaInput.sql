@@ -12,6 +12,7 @@ VALUES ('root3', 'root3', 1);
 
 INSERT INTO authorities (username, authority)
 VALUES ('root2', 'ROLE_USER');
+
 INSERT INTO authorities (username, authority)
 VALUES ('root3', 'ROLE_ADMIN');
 
