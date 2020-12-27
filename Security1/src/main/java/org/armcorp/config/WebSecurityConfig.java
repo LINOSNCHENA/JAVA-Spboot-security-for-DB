@@ -1,6 +1,6 @@
 package org.armcorp.config;
-import javax.sql.DataSource;
 
+import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ import org.springframework.security.provisioning.JdbcUserDetailsManager;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private static final String ADMIN = "ADMIN";
 	private static final String USER = "USER";
-	
+
 	@Autowired
 	private DataSource dataSource;
 

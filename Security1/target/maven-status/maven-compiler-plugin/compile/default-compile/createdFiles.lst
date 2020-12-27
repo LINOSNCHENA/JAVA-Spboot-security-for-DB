@@ -1,4 +1,3 @@
-org\armcorp\config\WebSecurityConfig.class
 org\armcorp\controller\Controller.class
 org\armcorp\model\legitUser.class
 org\armcorp\SpringBootApp.class
