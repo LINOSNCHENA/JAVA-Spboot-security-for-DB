@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/presly
+    username: postgres
+    password: Pemba2018
