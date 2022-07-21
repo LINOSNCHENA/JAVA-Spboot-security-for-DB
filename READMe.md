@@ -10,8 +10,17 @@ cd security1 \
 mvn spring-boot:run
 ```
 
-Open [http://localhost:8080/](http://localhost:8080/) in browser to see the application.
+## Links
 
+Open [http://localhost:8081/](http://localhost:8081/) in browser to see the application.
+Open [http://localhost:8081/admin](http://localhost:8081/admin) in browser to administrators.
+Open [http://localhost:8081/register](http://localhost:8081/register) in browser to register.
+
+
+## Frontend
+```
+Postman
+```
 
 ##  Different access layers per security classification
 
@@ -31,3 +40,6 @@ Below are some screens shots from the application user
 ![ AM#2 ](https://github.com/LINOSNCHENA/JAVA-Spring-Boot-security-for-databases/blob/master/UXview/page2.png)
 ![ AM#3 ](https://github.com/LINOSNCHENA/JAVA-Spring-Boot-security-for-databases/blob/master/UXview/page3.png)
 ![ AM#4 ](https://github.com/LINOSNCHENA/JAVA-Spring-Boot-security-for-databases/blob/master/UXview/page4.png)
+
+
+# End
