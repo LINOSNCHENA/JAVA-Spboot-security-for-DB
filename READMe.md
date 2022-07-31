@@ -1,9 +1,7 @@
 #  DATA SECURITY IN SPRING-BOOT
 
 ## Run application
-
 To run the application in development enter the following Maven command:  
-
 ```
 mvn clean package
 cd security1 \
@@ -11,11 +9,11 @@ mvn spring-boot:run
 ```
 
 ## Links
-
+```
 Open [http://localhost:8081/](http://localhost:8081/) in browser to see the application.
 Open [http://localhost:8081/admin](http://localhost:8081/admin) in browser to administrators.
 Open [http://localhost:8081/register](http://localhost:8081/register) in browser to register.
-
+```
 
 ## Frontend
 ```
