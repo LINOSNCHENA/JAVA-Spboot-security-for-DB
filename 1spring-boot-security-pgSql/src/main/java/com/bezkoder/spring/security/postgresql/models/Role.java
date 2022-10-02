@@ -6,7 +6,8 @@ import javax.persistence.*;
 @Table(name = "rolesx")
 public class Role {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)//AUTO)//DENTITY)
+	@Column(name = "id", updatable = false, nullable = false)
 	private Integer id;
 
 	@Enumerated(EnumType.STRING)

@@ -10,6 +10,8 @@ CREATE TABLE users
   PRIMARY KEY (username)
 );
 
+
+
 CREATE TABLE authorities
 (  username VARCHAR(90) NOT NULL,
   authority VARCHAR (90) NOT NULL,
@@ -18,8 +20,10 @@ CREATE TABLE authorities
   REFERENCES users (username)
 );
 
+
 select count(*)
 from users, authorities;
+
 select *
 from users, authorities;
 

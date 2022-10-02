@@ -1,4 +1,5 @@
 delete from user_roles;
+delete from usersx;
 delete from rolesx;
 
 INSERT INTO rolesx(name) VALUES('ROLE_USER');

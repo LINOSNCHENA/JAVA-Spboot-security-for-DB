@@ -13,6 +13,7 @@ cd 4Rambo
 http://localhost:8085/
 http://localhost:8080/
 http://localhost:3000/
+http://localhost:8080/h2-console
 
 
 # End

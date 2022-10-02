@@ -32,7 +32,7 @@ import com.bezkoder.spring.security.postgresql.repository.UserRepository;
 import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
 import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*",allowedHeaders = "*", maxAge = 3600)
+@CrossOrigin(origins = "*", allowedHeaders = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -64,8 +64,10 @@ public class AuthController {
 		List<String> roles = userDetails.getAuthorities().stream()
 				.map(item -> item.getAuthority())
 				.collect(Collectors.toList());
+		System.out.println("=====signIn======================1A======");
 		System.out.println(roles);
-		System.out.println("=====signIn======================1======");
+		System.out.println(userDetails);
+		System.out.println("=====signIn======================1B======");
 
 		return ResponseEntity.ok(new JwtResponse(jwt,
 				userDetails.getId(),
@@ -95,24 +97,30 @@ public class AuthController {
 
 		Set<String> strRoles = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
-
+		System.out.println("=====signUp======================2A======");
 		System.out.println(strRoles);
-		System.out.println("=====signUp======================1======");
+		System.out.println(roles);
+		System.out.println("=====signUp======================2B======");
 
 		if (strRoles == null) {
-			System.out.println("=====strRol======================1======");
+			System.out.println("=====strRoles======================1======");
 			System.out.println(strRoles);
-			System.out.println("=====strRol======================2======");
-			System.out.println(strRoles);
-			System.out.println("=====strRol======================3======");
+			System.out.println(roles);
+			System.out.println("=====strRoles======================2======");
 			Role userRole = roleRepository.findByName(ERole.ROLE_USER)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
+			System.out.println("=====strRoles======================3======");
 			System.out.println(userRole);
-			System.out.println(userRole.getClass());
+			//System.out.println(userRole.getClass());
 			System.out.println(userRole.getClass().getTypeName());
 			System.out.println(userRole.getClass().getSimpleName());
-			System.out.println("=====strRol======================4======");
+			System.out.println("=====strRoes======================4======");
+			System.out.println(strRoles);
+			System.out.println(roles);
+			System.out.println(roles.getClass().getTypeName());
+			System.out.println(roles.getClass().getSimpleName());
+			System.out.println("=====strRoles======================5======");
 		} else {
 			strRoles.forEach(role -> {
 				switch (role) {
