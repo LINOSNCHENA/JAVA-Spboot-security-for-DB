@@ -1,15 +1,14 @@
-INSERT INTO roles(name) VALUES('ROLE_USER');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
-INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 
-DROP TABLE IF EXISTS users;
-CREATE TABLE users(id SERIAL PRIMARY KEY, username VARCHAR(255), password varchar);
-INSERT INTO users(username, password) VALUES('User1-Audi', 52642);
-INSERT INTO users(username, password) VALUES('user2-Mercedes', 57127);
+DELETE FROM roles21;
+DELETE FROM users21;
 
-DROP TABLE IF EXISTS roles;
-CREATE TABLE roles(id SERIAL PRIMARY KEY, name VARCHAR(255), password varchar);
-INSERT INTO roles(name, password) VALUES('role1-Audi', 52642);
-INSERT INTO roles(name, password) VALUES('role2-Mercedes', 57127);
+INSERT INTO roles21(name) VALUES('ROLE_USER');
+INSERT INTO roles21(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles21(name) VALUES('ROLE_ADMIN');
 
-select * from users;
+INSERT INTO users21(username, password) VALUES('Nikolas', 'Nikolas');
+INSERT INTO users21(username, password) VALUES('Lorena', 'Lorena');
+INSERT INTO users21(username, password) VALUES('Leon', 'Leon');
+
+select * from users21;
+select * from roles21;

@@ -32,7 +32,7 @@ import com.bezkoder.spring.security.postgresql.repository.UserRepository;
 import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
 import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*",allowedHeaders = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -64,6 +64,8 @@ public class AuthController {
 		List<String> roles = userDetails.getAuthorities().stream()
 				.map(item -> item.getAuthority())
 				.collect(Collectors.toList());
+		System.out.println(roles);
+		System.out.println("=====signIn======================1======");
 
 		return ResponseEntity.ok(new JwtResponse(jwt,
 				userDetails.getId(),
@@ -94,15 +96,23 @@ public class AuthController {
 		Set<String> strRoles = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
 
+		System.out.println(strRoles);
+		System.out.println("=====signUp======================1======");
+
 		if (strRoles == null) {
-			System.out.print("=====strRol============================");
-			System.out.print(strRoles);
-			System.out.print("=====strRol============================");
-			System.out.print(strRoles);
-			System.out.print("=====strRol============================");
+			System.out.println("=====strRol======================1======");
+			System.out.println(strRoles);
+			System.out.println("=====strRol======================2======");
+			System.out.println(strRoles);
+			System.out.println("=====strRol======================3======");
 			Role userRole = roleRepository.findByName(ERole.ROLE_USER)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
+			System.out.println(userRole);
+			System.out.println(userRole.getClass());
+			System.out.println(userRole.getClass().getTypeName());
+			System.out.println(userRole.getClass().getSimpleName());
+			System.out.println("=====strRol======================4======");
 		} else {
 			strRoles.forEach(role -> {
 				switch (role) {

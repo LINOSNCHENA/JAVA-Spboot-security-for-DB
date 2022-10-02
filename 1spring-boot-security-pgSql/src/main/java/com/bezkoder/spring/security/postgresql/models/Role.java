@@ -3,7 +3,7 @@ package com.bezkoder.spring.security.postgresql.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "roles21")
 public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,7 +12,6 @@ public class Role {
 	@Enumerated(EnumType.STRING)
 	@Column(length = 20)
 	private ERole name;
-
 	public Role() {
 
 	}
