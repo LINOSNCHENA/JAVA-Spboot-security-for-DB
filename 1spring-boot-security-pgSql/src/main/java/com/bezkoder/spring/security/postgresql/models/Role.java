@@ -3,7 +3,7 @@ package com.bezkoder.spring.security.postgresql.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "roles21")
+@Table(name = "rolesx")
 public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

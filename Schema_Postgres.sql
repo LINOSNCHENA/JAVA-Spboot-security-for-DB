@@ -21,3 +21,6 @@ select count(*)
 from users, authorities;
 select *
 from users, authorities;
+
+select *
+from user_roles,usersx, rolesx;
