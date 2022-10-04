@@ -16,4 +16,9 @@ http://localhost:3000/
 http://localhost:8080/h2-console
 
 
+npm init nuxt-app@latest 6nuxtlogon
+npm i @nuxtjs/axios
+npm i @nuxtjs/auth-next
+
+
 # End
