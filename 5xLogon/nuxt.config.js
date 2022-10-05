@@ -1,6 +1,6 @@
 export default {
   server: {
-    port: 3000,
+    port: 3005,
     host: '127.0.0.1',
     timing: false,
     open: true

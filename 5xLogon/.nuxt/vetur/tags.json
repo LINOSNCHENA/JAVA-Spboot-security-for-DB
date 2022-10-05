@@ -1,0 +1,20 @@
+{
+  "User": {
+    "description": "Auto imported from components/User/index.vue"
+  },
+  "Home": {
+    "description": "Auto imported from components/Home/index.vue"
+  },
+  "HomeUsers": {
+    "description": "Auto imported from components/Home/Users/index.vue"
+  },
+  "AuthLogin": {
+    "description": "Auto imported from components/Auth/Login/index.vue"
+  },
+  "AuthRegister": {
+    "description": "Auto imported from components/Auth/Register/index.vue"
+  },
+  "LayoutsHeader": {
+    "description": "Auto imported from components/Layouts/Header/index.vue"
+  }
+}
